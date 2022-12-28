@@ -2,12 +2,12 @@
 // verb             nount           phrase
 
 const verbs = [
-  'failure', 
-  'crashing', 
-  'flopping',
-  'falling',
-  'ruining',
-  'flunking'
+  'Failure', 
+  'Crashing', 
+  'Flopping',
+  'Failing',
+  'Defeat',
+  'Flunking'
 ];
 
 const nouns = [
@@ -31,8 +31,16 @@ const phrases = [
 
 
 const inspiratinalQuoteGenerator = () => {
-  console.log( 'hi')
+  
+  // get randome vars
+//  console.log (Math.floor(Math.random ()*6))
+  const noun = nouns[Math.floor(Math.random ()*6)]
+  const verb = verbs[Math.floor(Math.random ()*6)]
+  const phrase = phrases[Math.floor(Math.random ()*7)]
+  
+  
+  return `${verb} is the ${noun} ${phrase}`
 
 }
 
-inspiratinalQuoteGenerator()
+console.log(inspiratinalQuoteGenerator())
